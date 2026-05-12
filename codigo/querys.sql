@@ -28,11 +28,8 @@ FROM sales_performance_analysis;
 SELECT Store_Sales
 FROM sales_performance_analysis
 ORDER BY Store_Sales DESC;
+
 -- PRIMIERO OU LIMITE SUPERIOR = 14920 --
 SELECT Store_Sales
 FROM sales_performance_analysis
 ORDER BY Store_Sales ASC;
-
-
-
-
