@@ -8,8 +8,9 @@ SELECT * FROM sales_performance_analysis;
 SELECT * FROM sales_performance_analysis
 LIMIT 100;
 
--- 895 LINHAS -- 
-SELECT COUNT(Store_Id)
+-- 895 LINHAS x 6 COLUNAS = 5.370 -- 
+SELECT COUNT(*) 
 FROM sales_performance_analysis;
+-- K = 1 + 3,3 * LOG(N) = K = 1 + 3,3 * LOG(5370) = 13 É O NUMERO DE CLASSES
 
--- K = 1 + 3,3 * LOG(N) = K = 1 + 3,3 * LOG 895 = 11
+
