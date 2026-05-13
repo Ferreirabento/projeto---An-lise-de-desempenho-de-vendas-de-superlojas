@@ -5,3 +5,21 @@ Analise a relação entre o tráfego de clientes e as vendas totais.
 Identifique regiões e países com melhor desempenho.
 
 doc: https://www.kaggle.com/datasets/samiullahds/superstore-sales-performance-analysis
+
+ID da loja = Store ID
+ID exclusivo para cada loja.
+
+Área_Loja = Store_Area
+Área total da loja em metros quadrados.
+
+Itens_Disponíveis = Items_Available
+Número de itens distintos disponíveis no inventário.
+
+Contagem_diária_do_cliente = Daily_Customer_Count 
+Número médio de clientes que visitam diariamente.
+
+Loja_Vendas = Store_Sales
+Receita total gerada pela loja em USD.
+
+Desempenho = Performance
+Categoria de vendas (Alta, Média, Baixa) com base na receita.
