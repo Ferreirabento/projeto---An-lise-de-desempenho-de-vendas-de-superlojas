@@ -7,12 +7,14 @@ SELECT * FROM sales_performance_analysis;
 
 -- verificando se não tem duplicatas --
 --verificando se não tem null--
-SELECT COUNT(DISTINCT Store_Sales)
-FROM sales_performance_analysis
-WHERE Store_Sales IS NOT NULL;
-
--- calculando o numero de classe de store_sales -- 
-SELECT COUNT(Store_Sales)
+-- calculando o numero de classe de store_sales --
+WITH sales_performance_analysis AS (
+    SELECT COUNT(DISTINCT Store_Sales) AS tratamento
+    FROM sales_performance_analysis
+    WHERE Store_Sales IS NOT NULL
+)
+SELECT tratamento,
+    CEIL(1 + (3.3 * LOG10(tratamento))) AS num_de_classes
 FROM sales_performance_analysis;
 -- K = 1 + 3,3 * LOG(N) = K = 1 + 3,3 * LOG(815) = 10 É O NUMERO DE CLASSES DE STORE_SALES --
 
