@@ -5,19 +5,16 @@ USE desempenhosuperlojas;
 -- vou começar com uma amostra-- 
 SELECT * FROM sales_performance_analysis;
 
---verificando se não tem null--
-SELECT * 
-FROM sales_performance_analysis
-WHERE Store_Sales IS NULL;
-
 -- verificando se não tem duplicatas --
+--verificando se não tem null--
 SELECT COUNT(DISTINCT Store_Sales)
-FROM sales_performance_analysis;
+FROM sales_performance_analysis
+WHERE Store_Sales IS NOT NULL;
 
 -- calculando o numero de classe de store_sales -- 
 SELECT COUNT(Store_Sales)
 FROM sales_performance_analysis;
--- K = 1 + 3,3 * LOG(N) = K = 1 + 3,3 * LOG(895) = 11 É O NUMERO DE CLASSES
+-- K = 1 + 3,3 * LOG(N) = K = 1 + 3,3 * LOG(815) = 10 É O NUMERO DE CLASSES DE STORE_SALES --
 
 -- calculando a amplitude total de store_sales = 101400 --
 SELECT MAX(Store_Sales) - MIN(Store_Sales) as amplitude_total
@@ -33,3 +30,5 @@ ORDER BY Store_Sales DESC;
 SELECT Store_Sales
 FROM sales_performance_analysis
 ORDER BY Store_Sales ASC;
+
+-- amplitude de classes de Store_sales --
