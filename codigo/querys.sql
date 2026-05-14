@@ -42,5 +42,6 @@ WITH sales_performance_analysis AS (
 )
 SELECT amplitude_total,
     CEIL(1 + (3.3 * LOG10(num))) as num_de_classes,
-    (amplitude_total / CEIL(1 + (3.3 * LOG10(num)))) as amplitude_de_classes
+    CEIL(amplitude_total / CEIL(1 + (3.3 * LOG10(num)))) as amplitude_de_classes
 FROM sales_performance_analysis;
+
