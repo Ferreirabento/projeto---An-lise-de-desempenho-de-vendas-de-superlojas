@@ -16,7 +16,7 @@ WITH sales_performance_analysis AS (
 SELECT tratamento,
     CEIL(1 + (3.3 * LOG10(tratamento))) AS num_de_classes
 FROM sales_performance_analysis;
--- K = 1 + 3,3 * LOG(N) = K = 1 + 3,3 * LOG(815) = 10 É O NUMERO DE CLASSES DE STORE_SALES --
+-- K = 1 + 3,3 * LOG(815) = 10 É O NUMERO DE CLASSES DE STORE_SALES --
 
 -- calculando a amplitude total de store_sales = 101400 --
 SELECT MAX(Store_Sales) - MIN(Store_Sales) as amplitude_total
