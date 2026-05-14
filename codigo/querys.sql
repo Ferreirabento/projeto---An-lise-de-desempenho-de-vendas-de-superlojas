@@ -10,6 +10,10 @@ SELECT *
 FROM sales_performance_analysis
 WHERE Store_Sales IS NULL;
 
+-- verificando se não tem duplicatas --
+SELECT COUNT(DISTINCT Store_Sales)
+FROM sales_performance_analysis;
+
 -- calculando o numero de classe de store_sales -- 
 SELECT COUNT(Store_Sales)
 FROM sales_performance_analysis;
